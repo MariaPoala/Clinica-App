@@ -1,6 +1,12 @@
+"use client"
 import './globals.css'
 import { Inter } from 'next/font/google'
-
+import Head from 'next/head'
+import { slugifyWithCounter } from '@sindresorhus/slugify'
+import Layaut from '../components/Layout'
+import { Hero } from '@/components/Hero'
+import Header from '../components/central'
+import BarraLateral from '../components/barra_lateral'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -13,9 +19,23 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const isHomePage = '/'
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+
+
+      <body className={inter.className}>
+        <Layaut />
+
+        {/* {isHomePage && <Hero />} */}
+        <div className="relative mx-auto flex max-w-8xl justify-center sm:px-4 lg:px-4 xl:px-4 bg-white">
+          <BarraLateral></BarraLateral>
+          <div className="min-w-0 max-w-2xl flex-auto px-4 py-4 lg:max-w-none lg:pl-4 lg:pr-0 xl:px-4">
+            {children}
+          </div>
+        </div>
+      </body>
+
     </html>
   )
 }

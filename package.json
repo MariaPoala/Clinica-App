@@ -9,16 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@algolia/autocomplete-core": "^1.9.2",
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "@markdoc/markdoc": "^0.3.0",
+    "@sindresorhus/slugify": "^2.2.1",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
+    "clsx": "^1.2.1",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
+    "highlight": "^0.2.4",
     "next": "13.4.4",
     "postcss": "8.4.24",
+    "prism-react-renderer": "^2.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-highlight": "^0.15.0",
+    "react-highlight-words": "^0.20.0",
+    "simple-functional-loader": "^1.2.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   }
