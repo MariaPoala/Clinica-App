@@ -305,12 +305,12 @@ export default function ServicioPage() {
               </label>
               <div className="relative">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                  <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                  <MagnifyingGlassIcon className="h-5 w-5 text-blue-400" aria-hidden="true" />
                 </div>
                 <input
                   id="search"
                   name="search"
-                  className="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-blue-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   placeholder="Search"
                   type="search"
                 />
@@ -320,24 +320,25 @@ export default function ServicioPage() {
         </div>
         <div className="mt-2 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
           {orders.map((order) => (
-            <div key={order.id} className="group relative bg-slate-100">
+            <div key={order.id} className="group relative bg-slate-100 ">
               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
                 <img src={order.imageSrc} alt={order.imageAlt} className="object-cover object-center" />
               </div>
-              <div className=' divide-y divide-slate-900/10 ml-2 mr-2'>
+              <div className=' divide-y divide-slate-900/10 ml-2 mr-2  '>
                 <h3 className="mt-4 text-sm text-gray-500 text-center">
                   <a href={order.href}>
                     <span className="absolute inset-0" />
                     {order.productName}
                   </a>
                 </h3>
-                <p className="mt-1 text-lg font-medium">
+                <p className="mt-1 text-lg font-medium h-14">
                   <span className="text-blue-800">
                     Delivered on <time dateTime={order.datetime}>{order.date}</time>
                   </span>
                 </p>
+                {/* ajustar contenido abajo */}
                 <div className="mt-2 border-t border-gray-900/5 flex justify-end">
-                  <a href="#" className="text-sm font-semibold leading-6 text-gray-900 ">
+                  <a href="#" className="text-sm font-semibold leading-6 text-blue-500 ">
                     Reservar Cita <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
